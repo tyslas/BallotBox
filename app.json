@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "ballot-box",
+    "description": "Improving Voter Participation",
+    "slug": "ballot-box",
+    "privacy": "public",
+    "sdkVersion": "25.0.0",
+    "platforms": ["ios", "android"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/ballotbox-logo-box-solo-blue.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}
