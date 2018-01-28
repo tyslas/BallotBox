@@ -6,19 +6,19 @@ import { TabNavigator, TabBarBottom } from 'react-navigation';
 import Colors from '../constants/Colors';
 
 import LoginScreen from '../screens/LoginScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import BallotScreen from '../screens/BallotScreen';
+import InfoScreen from '../screens/InfoScreen';
 
 export default TabNavigator(
   {
     Home: {
       screen: LoginScreen,
     },
-    Links: {
-      screen: LinksScreen,
+    Ballot: {
+      screen: BallotScreen,
     },
-    Settings: {
-      screen: SettingsScreen,
+    Info: {
+      screen: InfoScreen,
     },
   },
   {
@@ -33,12 +33,17 @@ export default TabNavigator(
                 ? `ios-log-in${focused ? '' : '-outline'}`
                 : 'md-log-in';
             break;
-          case 'Links':
-            iconName = Platform.OS === 'ios' ? `ios-book${focused ? '' : '-outline'}` : 'md-book';
-            break;
-          case 'Settings':
+          case 'Ballot':
             iconName =
-              Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options';
+              Platform.OS === 'ios'
+              ? `ios-checkmark-circle${focused ? '' : '-outline'}`
+              : 'md-checkmark-circle';
+            break;
+          case 'Info':
+            iconName =
+              Platform.OS === 'ios'
+              ? `ios-book${focused ? '' : '-outline'}`
+              : 'md-book';
         }
         return (
           <Ionicons
